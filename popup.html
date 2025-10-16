@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gemini Study Buddy</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gemini Study Buddy</h1>
+    <button id="summarizeBtn">Summarize Page</button>
+    <button id="clearBtn">Clear Results</button>
+<!-- NEW SETTINGS SECTION -->
+    <details class="settings-section">
+        <summary>Settings</summary>
+        <div class="settings-content">
+            <label for="summaryLength">Summary Length:</label>
+            <select id="summaryLength">
+                <option value="short">Short (100 words)</option>
+                <option value="medium">Medium (250 words)</option>
+                <option value="long">Long (Detailed)</option>
+                <option value="default">Default</option>
+            </select>
+
+            <label for="summaryTone">Summary Tone:</label>
+            <select id="summaryTone">
+                <option value="neutral">Neutral</option>
+                <option value="formal">Formal</option>
+                <option value="casual">Casual</option>
+            </select>
+            <!-- Add more settings here later if desired -->
+        </div>
+    </details>
+    <!-- END NEW SETTINGS SECTION -->
+    <div class="info-bar">
+        <span id="contentLength"></span>
+        <span id="geminiModelStatus"></span>
+    </div>
+<div id="loading" class="loading-spinner" style="display:none;">
+      Processing...
+    </div>
+    <div id="error" class="error-message" style="display:none;">
+      <!-- Error messages will appear here -->
+    </div>
+    <div id="summaryResult" class="result-box">
+      <p id="summaryText"></p>
+    </div>
+
+    <hr>
+
+    <h2>Ask a Question</h2>
+    <input type="text" id="questionInput" placeholder="e.g., What are the main points?">
+    <button id="askQuestionBtn">Ask</button>
+    <div id="answerResult" class="result-box">
+      <p id="answerText"></p>
+    </div>
+
+    <hr>
+
+    
+
+    
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
